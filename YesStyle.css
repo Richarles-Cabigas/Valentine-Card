@@ -1,0 +1,131 @@
+body {
+  padding-top: 20px;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.message h1 {
+  font-size: 2.5rem;
+  color: #e63e62;
+  text-align: center;
+  font-family: "Delius", cursive;
+  margin: 0;
+}
+
+.border-frame {
+  width: 95vw; /* almost full width */
+  height: 200px; /* let content define height */
+  max-width: none;
+  border: 10px solid #e63e62;
+  background-color: pink;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* smaller gap to adapt to smaller screens */
+  flex-wrap: wrap; /* allow GIFs to wrap on small screens */
+}
+
+.charles-container > img {
+  border-radius: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 190px;
+  width: 300px;
+}
+
+.happy-container img {
+  border-radius: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 190px;
+  width: 300px;
+}
+
+.charles-banana img {
+  border-radius: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 190px;
+  width: 300px;
+}
+
+.Gift-button {
+  padding-top: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.Gift-button > button {
+  width: 500px;
+  max-width: 90vw; /* ensures button shrinks on smaller devices */
+  height: 80px;
+  border: none;
+  font-size: 30px;
+  color: white;
+  font-family: "Delius", cursive;
+  background-color: #e63e62;
+  border-radius: 70px;
+}
+
+/* RESPONSIVE MEDIA QUERY */
+@media screen and (max-width: 900px) {
+  .border-frame {
+    flex-direction: column; /* stack GIFs vertically */
+    gap: 20px;
+    height: auto; /* allow height to adjust */
+  }
+
+  .charles-container,
+  .happy-container,
+  .charles-banana {
+    width: 80vw; /* scale GIFs to 80% of screen width */
+    max-width: 300px; /* prevent them from getting too big on tablets */
+    height: 150px; /* maintain aspect ratio */
+  }
+
+  .Gift-button > button {
+    width: 80vw; /* shrink button to fit screen */
+    font-size: 24px; /* smaller text */
+    height: 60px; /* smaller button height */
+    margin-bottom: 50px;
+  }
+
+  .message h1 {
+    font-size: 2rem; /* smaller heading for mobile */
+  }
+}
+
+/* OPTIONAL: FOR VERY SMALL DEVICES (<500px) */
+@media screen and (max-width: 500px) {
+  .charles-container,
+  .happy-container,
+  .charles-banana {
+    width: 90vw; /* almost full screen */
+    height: auto;
+  }
+
+  .Gift-button > button {
+    width: 90vw;
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .message h1 {
+    font-size: 1.5rem;
+  }
+}

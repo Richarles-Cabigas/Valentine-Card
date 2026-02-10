@@ -1,0 +1,150 @@
+section {
+  border: 10px solid gray;
+  border-radius: 10px;
+  position: relative;
+  height: 90vh;
+  margin-top: 20px;
+  background-color: pink;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  background-image: url("valentine.png");
+  background-size: cover;
+  background-position: center;
+
+  width: 90%;
+  max-width: 420px; /* looks great on desktop */
+  min-height: 70svh; /* mobile-safe vh */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 4px solid #e63e62;
+  border-radius: 40px;
+  padding: 20px 15px;
+  overflow: hidden;
+}
+
+.pleaseGif {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid #e63e62;
+  border-radius: 20px;
+  flex-shrink: 0;
+  margin-top: 50px;
+}
+
+.pleaseGif > img {
+  max-width: 100%;
+  height: auto;
+  max-height: 160px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e63e62;
+  border-radius: 60px;
+  font-family: "Delius", cursive;
+
+  padding: 8px 12px;
+
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 90px;
+  flex-wrap: wrap;
+}
+
+.no-slot {
+  position: relative;
+  width: 200px;
+  height: 60px;
+}
+
+#noBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 180px;
+  height: 40px;
+  border-radius: 60px;
+  border: none;
+  background-color: #e63e62;
+  color: white;
+  font-size: 20px;
+  font-family: "Delius", cursive;
+  font-style: italic;
+  cursor: pointer;
+
+  transition:
+    top 0.2s ease,
+    left 0.2s ease;
+}
+
+.buttons > button {
+  width: 180px;
+  height: 40px;
+  border-radius: 60px;
+  border: none;
+  background-color: #e63e62;
+  color: white;
+  font-size: 20px;
+  font-family: "Delius", cursive;
+  font-style: italic;
+  cursor: pointer;
+  transition:
+    width 0.3s ease,
+    height 0.3s ease; /* smooth grow/shrink */
+}
+
+#yesBtn {
+  transition:
+    width 0.25s ease,
+    height 0.25s ease;
+}
+
+#noBtn {
+  transition:
+    top 0.08s linear,
+    left 0.08s linear,
+    transform 0.2s ease;
+}
+
+/*MOBILE VIEW*/
+@media (max-width: 480px) {
+  section {
+    padding: 10px;
+    height: auto;
+  }
+
+  .card-container {
+    min-height: 85svh;
+    border-radius: 30px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+  .buttons {
+    margin-bottom: 69px;
+  }
+}
